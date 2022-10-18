@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+}
+.next-btn {
+    border:solid 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.next-btn:hover {
+    opacity: 0.7;
+    color: red;
+}
