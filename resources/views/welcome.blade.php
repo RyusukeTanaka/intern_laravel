@@ -1,6 +1,6 @@
 <x-layout>
     <a href="#" class="next-btn">
-        押してみて
+        Ex-laravel
     </a>
 </x-layout>
 
