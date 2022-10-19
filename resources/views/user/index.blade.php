@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="tables" style="background-color:#f8f8ff;width:1000px;">
+    <div class="tables" style="background-color:#f8f8ff;">
         <div class="list-header">
             <div class="list-header-left">
                 UserList

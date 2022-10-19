@@ -16,7 +16,8 @@ header {
 }
 .tables {
     padding: 10px 5px;
-    margin-left: auto;
+    float: left;
+    width: 100%;
 }
 .btn {
     border: solid 1px!important;
