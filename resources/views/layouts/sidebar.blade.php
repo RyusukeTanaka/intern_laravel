@@ -19,5 +19,4 @@
             <a href="#">Category management</a>
         </li>
     </ul>
-    {{ $slot }}
 </div>

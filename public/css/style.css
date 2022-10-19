@@ -7,7 +7,9 @@ header {
 .header-title {
     margin: auto;
 }
-
+.main-wrapper {
+    display: flex;
+}
 .avator {
     width: 20px;
     padding: 5px;
