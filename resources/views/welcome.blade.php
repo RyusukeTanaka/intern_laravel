@@ -1,4 +1,4 @@
-<x-layout>
+<x-head>
 <x-header>
 
 </x-header>
@@ -11,6 +11,6 @@
 <x-footer>
 
 </x-footer>
-</x-layout>
+</x-head>
 
 
