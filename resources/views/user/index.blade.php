@@ -7,7 +7,9 @@
             </div>
             <div class="list-header-right">
                 <button class="btn-send">send mail</button>
-                <button class="btn-add">+Add new</button>
+                <button class="btn-add">
+                    <a href="{{ route('user.create') }}" class="btn-add">+Add new</a>
+                </button>
             </div>
         </div>
         <table class="user-list" bgcolor="#fff" style="margin:10px auto;width:95%;">
