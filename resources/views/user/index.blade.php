@@ -7,10 +7,12 @@
             </div>
             <div class="list-header-right">
                 <button class="btn-send">send mail</button>
-                <button class="btn-add">+Add new</button>
+                <button class="btn-add">
+                    <a href="{{ route('user.create') }}" class="btn-add">+Add new</a>
+                </button>
             </div>
         </div>
-        <table class="user-list" bgcolor="#fff" style="margin:10px auto;width:95%;">
+        <table class="user-list" style="margin:10px auto;width:95%;">
             <tbody>
             <tr class="calum-list">
                 <th class="calum avator solid" style="text-align:center;">Avator</th>
@@ -18,81 +20,25 @@
                 <th class="calum solid">Email</th>
                 <th class="calum solid">Action</th>
             </tr>
-            <tr class="user">
-                <td class="avator solid" style="text-align:center;">
-                    <i class="fa-solid fa-user" style="font-size:30px;"></i>
-                </td>
-                <td class="name solid">
-                    test1
-                </td>
-                <td class="email solid">
-                    test1@test.com
-                </td>
-                <td class="action solid">
-                    <button class="edit btn btn-blue">Edit</button>
-                    <button class="delete btn btn-red">Delete</button>
-                </td>
-            </tr>
-            <tr class="user">
-                <td class="avator solid" style="text-align:center;">
-                    <i class="fa-solid fa-user" style="font-size:30px;"></i>
-                </td>
-                <td class="name solid">
-                    test2
-                </td>
-                <td class="email solid">
-                    test2@test.com
-                </td>
-                <td class="action solid">
-                    <button class="edit btn btn-blue">Edit</button>
-                    <button class="delete btn btn-red">Delete</button>
-                </td>
-            </tr>
-            <tr class="user">
-                <td class="avator solid" style="text-align:center;">
-                    <i class="fa-solid fa-user" style="font-size:30px;"></i>
-                </td>
-                <td class="name solid">
-                    test3
-                </td>
-                <td class="email solid">
-                    test3@test.com
-                </td>
-                <td class="action solid">
-                    <button class="edit btn btn-blue">Edit</button>
-                    <button class="delete btn btn-red">Delete</button>
-                </td>
-            </tr>
-            <tr class="user">
-                <td class="avator solid" style="text-align:center;">
-                    <i class="fa-solid fa-user" style="font-size:30px;"></i>
-                </td>
-                <td class="name solid">
-                    test4
-                </td>
-                <td class="email solid">
-                    test4@test.com
-                </td>
-                <td class="action solid">
-                    <button class="edit btn btn-blue">Edit</button>
-                    <button class="delete btn btn-red">Delete</button>
-                </td>
-            </tr>
-            <tr class="user">
-                <td class="avator solid" style="text-align:center;">
-                    <i class="fa-solid fa-user" style="font-size:30px;"></i>
-                </td>
-                <td class="name solid">
-                    test5
-                </td>
-                <td class="email solid">
-                    test5@test.com
-                </td>
-                <td class="action solid">
-                    <button class="edit btn btn-blue">Edit</button>
-                    <button class="delete btn btn-red">Delete</button>
-                </td>
-            </tr>
+            @forelse($users as $user)
+                <tr class="user">
+                    <td class="avator solid" style="text-align:center;">
+                        <i class="fa-solid fa-user" style="font-size:30px;"></i>
+                    </td>
+                    <td class="name solid">
+                        {{ $user -> name }}
+                    </td>
+                    <td class="email solid">
+                        {{ $user -> email }}
+                    </td>
+                    <td class="action solid">
+                        <button class="edit btn btn-blue">Edit</button>
+                        <button class="delete btn btn-red">Delete</button>
+                    </td>
+                </tr>
+            @empty
+                <li>何も無いです</li>
+            @endforelse
             </tbody>
         </table>
         <div class="text-center mt-3 mt-sm-3">
