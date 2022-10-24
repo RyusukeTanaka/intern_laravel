@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="create-user">
+    <form class="create-user" action="{{ route('user.store') }}" method="post">
+        @csrf
         <div class="list-header">
             <div class="list-header-left">
                 <h2>create a user</h2>
@@ -11,16 +12,16 @@
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput">
+            <input type="text" class="form-control" id="formGroupExampleInput" name="name">
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Email</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2">
+            <input type="text" class="form-control" id="formGroupExampleInput2" name="email">
         </div>
         <div class="password-form">
             <div class="mb-3 password-left">
                 <label for="formGroupExampleInput2" class="form-label">Password</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2">
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="password">
             </div>
             <div class="mb-3 password-right">
                 <label for="formGroupExampleInput2" class="form-label">Password confirm</label>
@@ -29,24 +30,24 @@
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Address</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2">
+            <input type="text" class="form-control" id="formGroupExampleInput2" name="address">
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Facebook link</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://exampl.com">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://exampl.com" name="facebook_link">
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">YouTube link</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://exampl.com">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="https://exampl.com" name="youtube_link">
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Description</label>
-            <textarea type="text" class="form-control" id="formGroupExampleInput2"></textarea>
+            <textarea type="text" class="form-control" id="formGroupExampleInput2" name="description"></textarea>
         </div>
         <div class="form-bottom">
-            <a class="btn btn-save" href="#">Save</a>
-            <a class="btn btn-reset" href="#">Reset</a>
+            <button class="btn btn-save">Save</button>
+            <button class="btn btn-reset" type="reset">Reset</button>
         </div>
-    </div>
+    </form>
 
 @endsection

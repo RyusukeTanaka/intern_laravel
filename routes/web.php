@@ -14,8 +14,12 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', [UserController::class,'index'])
-    ->name('user.index');
+//Route::get('/', [UserController::class,'index'])
+//    ->name('user.index');
+//
+//Route::get('/user/create',[UserController::class,'create'])
+//    ->name('user.create');
+//Route::post('/user/store', [UserController::class,'store'])
+//    ->name('user.store');
 
-Route::get('/user/create',[UserController::class,'create'])
-    ->name('user.create');
+Route::resource('user',UserController::class);
